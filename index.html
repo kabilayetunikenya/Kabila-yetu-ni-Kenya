@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabila Yetu Ni Kenya</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ---------------- GENERAL ---------------- */
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+
+        /* --- Background Image --- */
+        background-image: 
+            linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), 
+            url('images/kenya\ flag.jpg'); /* ← your local file */
+        
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        /* Smooth look */
+        color: #ffffff;
+    }
+
+    /* Optional: improves readability of text on background */
+    .content-wrapper {
+        max-width: 900px;
+        margin: auto;
+        padding: 40px 20px;
+        background: rgba(0, 0, 0, 0.35);
+        border-radius: 12px;
+    }
+        
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 70px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* ---------------- HEADER ---------------- */
+        header {
+            text-align: center;
+            padding: 25px 0;
+        }
+
+        header img {
+            width: 150px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            font-weight: 700;
+            margin: 0;
+            margin-top: 5px;
+        }
+
+        /* ---------------- SOCIAL ICONS ---------------- */
+        .social-links {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #009b3a;
+        }
+
+        /* ---------------- PILLARS ---------------- */
+        .pillars .pillar {
+            margin-bottom: 35px;
+        }
+
+        .pillars h3 {
+            font-size: 22px;
+            margin-bottom: 6px;
+            color: #00ff9d;
+        }
+
+        /* ---------------- CONTACT FORM ---------------- */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        input, textarea {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+            background: #009b3a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #00c851;
+        }
+
+        /* ---------------- FOOTER ---------------- */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0, 0, 0, 0.65);
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Darkened blur overlay -->
+    <div class="overlay"></div>
+
+    <!-- ---------------- HEADER ---------------- -->
+    <header>
+        <img src="images/kabila yetu ni kenya.jpeg" alt="Kabila Yetu Ni Kenya Logo">
+        <h1>Kabila Yetu Ni Kenya</h1>
+
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </header>
+
+    <!-- ---------------- MAIN CONTENT ---------------- -->
+    <main>
+
+        <section class="intro">
+            <h2>Our Tribe is Kenya</h2>
+            <p>
+                Kabila Yetu Ni Kenya is a unity-driven movement built on patriotism, responsibility,
+                and national identity. We choose peace and purpose over division, empowering our citizens
+                socially, economically, and politically for a stronger, united Kenya.
+            </p>
+        </section>
+
+        <section class="vision">
+            <h2>Our Vision</h2>
+            <p>
+                A country where unity guides decisions, young people lead with values,
+                and every Kenyan contributes to shaping a peaceful and progressive nation.
+            </p>
+        </section>
+
+        <section class="pillars">
+            <h2>Pillars of the Movement</h2>
+
+            <div class="pillar">
+                <h3>Unity Above Tribe</h3>
+                <p>We embrace our national identity and promote peace, dignity, and togetherness.</p>
+            </div>
+
+            <div class="pillar">
+                <h3>Social Responsibility</h3>
+                <p>We encourage active citizenship, community engagement, and supportive leadership.</p>
+            </div>
+
+            <div class="pillar">
+                <h3>Accountability</h3>
+                <p>We uphold transparency, integrity, and participation in public life.</p>
+            </div>
+
+            <div class="pillar">
+                <h3>Economic Empowerment</h3>
+                <p>We support skills, innovation, and opportunities for youth empowerment.</p>
+            </div>
+        </section>
+
+        <section class="oath">
+            <h2>Movement Oath</h2>
+            <p>
+                “I choose Kenya above tribe.
+                I commit to unity, peace, and responsibility.
+                I stand for truth, justice, and the well-being of every citizen.
+                I am a builder of my nation.
+                My tribe is Kenya.”
+            </p>
+        </section>
+
+        <!-- ---------------- VOLUNTEER SECTION ---------------- -->
+        <section class="volunteer">
+            <h2>Join the Movement</h2>
+            <p>
+                Be part of a generation shaping Kenya’s future with unity and purpose.
+                Sign up to volunteer, contribute, or participate in upcoming activities.
+            </p>
+
+            <button>Become a Patriot</button>
+
+    </main>
+
+    <!-- ---------------- FOOTER ---------------- -->
+    <footer>
+        <p><strong>Mission:</strong> Uniting Kenyans under one identity — our tribe is Kenya.</p>
+        <p>© 2025 Kabila Yetu Ni Kenya. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
