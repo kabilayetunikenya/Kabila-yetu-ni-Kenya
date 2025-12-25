@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery | Kabila Yetu Ni Kenya</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', Arial, sans-serif;
+            color: #ffffff;
+
+            /* Background same as homepage */
+            background-image:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url('images/kenya\ flag.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 16px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .albums {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .album {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: rgba(0,0,0,0.35);
+            border-radius: 10px;
+            transition: 0.3s ease;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .album:hover {
+            background: rgba(0,100,0,0.6);
+        }
+
+        .album i {
+            font-size: 30px;
+            min-width: 40px;
+        }
+
+        .album h3 {
+            margin: 0 0 5px;
+            font-size: 20px;
+        }
+
+        .album p {
+            margin: 0;
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            background: rgba(0,0,0,0.4);
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Gallery</h1>
+    <p>
+        A visual record of our journey, engagements, and moments that reflect
+        unity, patriotism, and civic responsibility.
+    </p>
+</header>
+<!-- Launch Interview Video Section -->
+<section style="
+    max-width: 900px;
+    margin: 40px auto 10px;
+    padding: 0 20px;
+    text-align: center;
+">
+
+    <h2 style="
+        font-size: 26px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    ">
+        Launch Interview
+    </h2>
+
+    <p style="
+        max-width: 700px;
+        margin: 0 auto 25px;
+        font-size: 15px;
+        line-height: 1.6;
+        opacity: 0.9;
+    ">
+        Our first media interview during the official launch of
+        <strong>Kabila Yetu Ni Kenya</strong>, sharing the vision, purpose,
+        and message of unity.
+    </p>
+
+    <div style="
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 12px;
+        background: rgba(0,0,0,0.4);
+    ">
+        <iframe 
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            ">
+        </iframe>
+    </div>
+</section>
+
+
+<section class="albums">
+
+    <!-- Album 1 -->
+    <a href="https://photos.app.goo.gl/3n13sYRUkCVmpZXT6" class="album">
+        <i class="fas fa-flag"></i>
+        <div>
+            <h3>National Engagements</h3>
+            <p>Kabila Yetu Ni Kenya Lauch on Jamuhuri 2025.</p>
+            <p>Public forums, civic education, and national conversations.</p>
+        </div>
+    </a>
+
+    <!-- Album 2 -->
+    <a href="https://photos.app.goo.gl/FPTSFkEbAfyxp6va6" class="album">
+        <i class="fas fa-users"></i>
+        <div>
+            <h3>Youth & Community Forums</h3>
+            <p>Youth dialogues, community meetings, and grassroots outreach.</p>
+        </div>
+    </a>
+
+    <!-- Album 3 -->
+    <a href="https://photos.app.goo.gl/ArxxPqaiHkPxfSRT8" class="album">
+        <i class="fas fa-handshake"></i>
+        <div>
+            <h3>Kabila Yetu Ni Kenya Charity works</h3>
+            <p>Moments of Charity to the vulnerable.</p>
+        </div>
+    </a>
+
+    <!-- Album 4 -->
+    <a href="#" class="album">
+        <i class="fas fa-camera"></i>
+        <div>
+            <h3>Media & Public Appearances</h3>
+            <p>TV interviews, press briefings, and public events.</p>
+        </div>
+    </a>
+
+</section>
+
+<footer>
+    © 2025 Kabila Yetu Ni Kenya — Our Tribe Is Kenya
+</footer>
+
+</body>
+</html>
