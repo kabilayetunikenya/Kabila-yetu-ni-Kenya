@@ -2,29 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us | Kabila Yetu Ni Kenya</title>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
 body {
     margin: 0;
     font-family: 'Inter', Arial, sans-serif;
     color: #ffffff;
     background:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
         url('images/kenya flag.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 /* Container */
 .container {
     max-width: 950px;
     margin: auto;
-    padding: 70px 20px 60px;
+    padding: 80px 20px 60px;
 }
 
 /* Header */
@@ -34,7 +36,7 @@ header {
 }
 
 header h1 {
-    font-size: 34px;
+    font-size: 36px;
     letter-spacing: 1px;
     margin-bottom: 12px;
 }
@@ -42,29 +44,29 @@ header h1 {
 header p {
     max-width: 750px;
     margin: auto;
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 17px;
+    line-height: 1.8;
     opacity: 0.95;
 }
 
 /* Sections */
 .section {
-    background: rgba(0,0,0,0.35);
-    padding: 30px;
-    border-radius: 14px;
+    background: rgba(0,0,0,0.45);
+    padding: 35px;
+    border-radius: 16px;
     margin-bottom: 30px;
+    backdrop-filter: blur(4px);
 }
 
 .section h2 {
     margin-top: 0;
     font-size: 24px;
-    letter-spacing: 0.8px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .section p {
-    font-size: 15.5px;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.8;
     opacity: 0.95;
 }
 
@@ -77,9 +79,14 @@ header p {
 }
 
 .point {
-    background: rgba(0,0,0,0.4);
-    padding: 20px;
-    border-radius: 12px;
+    background: rgba(0,0,0,0.5);
+    padding: 22px;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.point:hover {
+    transform: translateY(-5px);
 }
 
 .point i {
@@ -94,32 +101,76 @@ header p {
 }
 
 .point p {
-    font-size: 14.5px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.7;
 }
 
 /* Back Home */
 .back-home {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .back-home a {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
     color: #ffffff;
     text-decoration: none;
     font-size: 15px;
+    transition: 0.3s;
+}
+
+.back-home a:hover {
+    background: rgba(255,255,255,0.2);
 }
 
 .back-home i {
     margin-right: 6px;
 }
 
-/* Mobile */
-@media (max-width: 700px) {
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+
+    .container {
+        padding: 60px 15px 40px;
+    }
+
     header h1 {
         font-size: 28px;
     }
+
+    header p {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 22px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .section p {
+        font-size: 14.5px;
+    }
+
+    .vision-points {
+        grid-template-columns: 1fr;
+    }
+
+    .point {
+        padding: 18px;
+    }
+
+    .back-home a {
+        width: 100%;
+        max-width: 250px;
+    }
 }
+
 </style>
 </head>
 
@@ -136,7 +187,6 @@ header p {
     </p>
 </header>
 
-<!-- Who We Are -->
 <div class="section">
     <h2>Who We Are</h2>
     <p>
@@ -152,7 +202,6 @@ header p {
     </p>
 </div>
 
-<!-- Why We Exist -->
 <div class="section">
     <h2>Why We Exist</h2>
     <p>
@@ -163,7 +212,6 @@ header p {
     </p>
 </div>
 
-<!-- Where We Are Going -->
 <div class="section">
     <h2>Where We Are Going</h2>
     <p>
@@ -176,37 +224,25 @@ header p {
         <div class="point">
             <i class="fas fa-users"></i>
             <h4>National Unity</h4>
-            <p>
-                Building a culture of cohesion and respect that transcends
-                ethnic, social, and political lines.
-            </p>
+            <p>Building cohesion that transcends ethnic and political lines.</p>
         </div>
 
         <div class="point">
             <i class="fas fa-bullhorn"></i>
             <h4>Civic Awareness</h4>
-            <p>
-                Empowering citizens with knowledge, dialogue, and platforms to
-                engage meaningfully in national conversations.
-            </p>
+            <p>Empowering citizens to engage meaningfully in national conversations.</p>
         </div>
 
         <div class="point">
             <i class="fas fa-handshake"></i>
             <h4>Community Action</h4>
-            <p>
-                Supporting initiatives that uplift communities, protect the
-                vulnerable, and nurture future generations.
-            </p>
+            <p>Supporting initiatives that uplift communities and nurture future generations.</p>
         </div>
 
         <div class="point">
             <i class="fas fa-flag"></i>
             <h4>Patriotism with Purpose</h4>
-            <p>
-                Encouraging love for country expressed through responsibility,
-                integrity, and service.
-            </p>
+            <p>Expressing love for country through responsibility and service.</p>
         </div>
     </div>
 </div>
