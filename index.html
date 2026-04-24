@@ -1,349 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kabila Yetu Ni Kenya</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kabila Yetu Ni Kenya</title>
 
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
-        /* ---------------- GENERAL ---------------- */
-        body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Inter', sans-serif;
+<style>
 
-        /* --- Background Image --- */
-        background-image: 
-            linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), 
-            url('images/kenya\ flag.jpg'); /* ← your local file */
-        
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
 
-        /* Smooth look */
-        color: #ffffff;
-    }
+    background-image:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('images/kenya flag.jpg');
 
-    /* Optional: improves readability of text on background */
-    .content-wrapper {
-        max-width: 900px;
-        margin: auto;
-        padding: 40px 20px;
-        background: rgba(0, 0, 0, 0.35);
-        border-radius: 12px;
-    }
-        
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 40px 20px;
-        }
+/* 🔥 WIDER CONTAINER FOR LARGE SCREENS */
+section {
+    padding: 80px 40px;
+    max-width: 1400px;   /* increased */
+    margin: auto;
+}
 
-        section {
-            margin-bottom: 70px;
-            text-align: center;
-        }
+/* ---------- NAVBAR ---------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-        section h2 {
-            font-size: 30px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        section p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        /* ---------------- HEADER ---------------- */
-        header {
-            text-align: center;
-            padding: 25px 0;
-        }
-
-        header img {
-            width: 150px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-
-        header h1 {
-            font-size: 40px;
-            font-weight: 700;
-            margin: 0;
-            margin-top: 5px;
-        }
-
-        /* ---------------- SOCIAL ICONS ---------------- */
-        .social-links {
-            margin-top: 12px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 10px;
-            border-radius: 50%;
-            transition: 0.3s;
-        }
-
-        .social-links a:hover {
-            background: #009b3a;
-        }
-
-        /* ---------------- PILLARS ---------------- */
-        .pillars .pillar {
-            margin-bottom: 35px;
-        }
-
-        .pillars h3 {
-            font-size: 22px;
-            margin-bottom: 6px;
-            color: #00ff9d;
-        }
-
-        /* ---------------- CONTACT FORM ---------------- */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        input, textarea {
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        button {
-            padding: 15px;
-            font-size: 18px;
-            background: #009b3a;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #00c851;
-        }
-        .quick-links {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin: 30px 0;
+    align-items: center;
+
+    padding: 15px 20px;
+    background: rgba(226, 32, 32, 0.973);
+    backdrop-filter: blur(10px);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00c851;
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    left: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ---------- HERO ---------- */
+/* ---------- HERO IMPROVED BALANCE ---------- */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
     flex-wrap: wrap;
 }
 
-.quick-links a {
-    text-decoration: none;
-    color: #ffffff;
+/* 🔥 LOGO SIDE (BIGGER & STRONGER) */
+.hero-left {
+    flex: 1.2;   /* more space for logo */
     text-align: center;
-    font-size: 14px;
-    transition: 0.3s ease;
 }
 
-.quick-links i {
-    font-size: 28px;
-    display: block;
-    margin-bottom: 6px;
+.hero-left img {
+    width: 420px;     /* 🔥 bigger */
+    max-width: 100%;
+    height: auto;
 }
 
-.quick-links a:hover {
-    color: #3cb371;
+.hero-left p {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* 🔥 VIDEO SIDE (REDUCED + CONTROLLED) */
+.hero-right {
+    flex: 1;
+}
+
+.hero-right video {
+    width: 100%;
+    height: 350px;        /* reduced */
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* ---------- LARGE SCREENS ---------- */
+@media (min-width: 1200px) {
+
+    .hero-left img {
+        width: 480px;   /* bigger on large screens */
+    }
+
+    .hero-right video {
+        height: 380px;  /* controlled size */
+    }
+}
+
+/* ---------- TABLETS ---------- */
+@media (max-width: 992px) {
+
+    .hero-left img {
+        width: 300px;
+    }
+
+    .hero-right video {
+        height: 260px;
+    }
+}
+
+/* ---------- MOBILE (IMPORTANT FIX) ---------- */
+@media (max-width: 768px) {
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left img {
+        width: 220px;
+    }
+
+    .hero-right video {
+        width: 100%;
+        height: auto;        /* 🔥 KEY FIX */
+        max-height: 250px;   /* prevents overflow */
+        object-fit: contain; /* 🔥 ensures full video fits */
+    }
+}
+
+/* ---------- SPLIT ---------- */
+.split {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.split div {
+    flex: 1;
+}
+
+/* ---------- BUTTON ---------- */
+button {
+    padding: 12px 20px;
+    background: #009b3a;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00c851;
+}
+
+/* ---------- SOCIAL ---------- */
+.social-section {
+    text-align: center;
+}
+
+.social-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.social-grid a {
+    text-decoration: none;
+    color: white;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 120px;
+}
+
+.social-grid a:hover {
+    background: #009b3a;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0,0,0,0.7);
 }
 
 
-        /* ---------------- FOOTER ---------------- */
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            background: rgba(0, 0, 0, 0.65);
-            margin-top: 60px;
-        }
 
-        footer p {
-            margin: 5px 0;
-            font-size: 15px;
-            opacity: 0.9;
-        }
-    </style>
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+
+    .hero-container,
+    .split {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left img {
+        width: 180px;
+    }
+
+    .hero-right video {
+        height: 250px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(0,0,0,0.95);
+        display: none;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
-    <!-- Darkened blur overlay -->
-    <div class="overlay"></div>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
 
-    <!-- ---------------- HEADER ---------------- -->
-    <header>
-        <img src="images/kabila yetu ni kenya.jpeg" alt="Kabila Yetu Ni Kenya Logo">
-        <h1>Kabila Yetu Ni Kenya</h1>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="initiatives.html">Initiatives</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-        <div class="social-links">
-            <a href="https://www.facebook.com/profile.php?id=61584663070191" target="_blank">
-    <i class="fab fa-facebook-f"></i>
-</a>
-            <a href="https://x.com/kabila2nikenya" target="_blank">
-    <i class="fab fa-twitter"></i>
-</a>
-            <a href="https://www.instagram.com/kabilayetunikenya?igsh=NjdhbHpsdjVwaTNh" target="_blank">
-    <i class="fab fa-instagram"></i>
-</a>
-            <a href="https://vm.tiktok.com/ZMHwURKBBAugw-UH1gv/" target="_blank">
-    <i class="fab fa-tiktok"></i>
-</a>
-<a href="https://www.youtube.com/@kabilayetunikenya" target="_blank">
-    <i class="fab fa-youtube"></i>
-</a>
+<!-- HERO -->
+<section>
+    <div class="hero-container">
 
-<a href="gallery.html">
-    <i class="fas fa-images"></i>
-</a>
-
+        <div class="hero-left">
+            <img src="images/Untitled design.png">
+            <p>One People, One Nation, One Tribe.</p>
         </div>
-    </header>
 
-    <!-- ---------------- MAIN CONTENT ---------------- -->
-    <main>
+        <div class="hero-right">
+            <video autoplay muted loop playsinline>
+                <source src="images/KYNK 1 Vision Presentation.mp4" type="video/mp4">
+            </video>
+        </div>
 
-        <section class="intro">
-            <h2>Our Tribe is Kenya</h2>
-            <p>
-                Kabila Yetu Ni Kenya is a unity-driven movement built on patriotism, responsibility,
-                and national identity. We choose peace and purpose over division, empowering our citizens
-                socially, economically, and politically for a stronger, united Kenya.
-            </p>
-        </section>
-
-        <section class="vision">
-            <h2>Our Vision</h2>
-            <p>
-                A country where unity guides decisions, young people lead with values,
-                and every Kenyan contributes to shaping a peaceful and progressive nation.
-            </p>
-        </section>
-
-        <section class="pillars">
-            <h2>Pillars of the Movement</h2>
-
-            <div class="pillar">
-                <h3>Unity Above Tribe</h3>
-                <p>We embrace our national identity and promote peace, dignity, and togetherness.</p>
-            </div>
-
-            <div class="pillar">
-                <h3>Social Responsibility</h3>
-                <p>We encourage active citizenship, community engagement, and supportive leadership.</p>
-            </div>
-
-            <div class="pillar">
-                <h3>Accountability</h3>
-                <p>We uphold transparency, integrity, and participation in public life.</p>
-            </div>
-
-            <div class="pillar">
-                <h3>Economic Empowerment</h3>
-                <p>We support skills, innovation, and opportunities for youth empowerment.</p>
-            </div>
-        </section>
-
-        <section class="oath">
-            <h2>Movement Oath</h2>
-            <p>
-    “I choose Kenya above tribe.
-    I commit to unity, peace, and responsibility.
-    I stand for truth, justice, and the well-being of every citizen.
-    I am a builder of my nation.
-    <span style="font-weight: bold;">Kabila Yetu Ni Kenya.</span>”
-</p>
-        </section>
-
-        <!-- ---------------- VOLUNTEER SECTION ---------------- -->
-        <section class="volunteer">
-            <h2>Join the Movement</h2>
-            <p>
-                Be part of a generation shaping Kenya’s future with unity and purpose.
-                Sign up to volunteer, contribute, or participate in upcoming activities.
-            </p>
-
-            <a href="https://chat.whatsapp.com/DmgxY31FuvD5E0RZ5Rr8il" target="_blank">
-    <button>Join Now</button>
-</a>
-    </main>
-    <div class="quick-links">
-    <a href="about.html">
-        <i class="fas fa-info-circle"></i>
-        <span>About Us</span>
-    </a>
-
-    <a href="initiatives.html">
-        <i class="fas fa-seedling"></i>
-        <span>Initiatives</span>
-    </a>
-</div>
-
-    <!-- Contact Us Section -->
-<section id="contact" style="
-    padding: 60px 20px;
-    text-align: center;
-">
-    <h2 style="
-        font-size: 28px;
-        margin-bottom: 15px;
-        letter-spacing: 1px;
-    ">
-        Contact Us
-    </h2>
-
-    <p style="
-        max-width: 700px;
-        margin: 0 auto 25px;
-        font-size: 16px;
-        line-height: 1.7;
-        opacity: 0.9;
-    ">
-        Reach out to us for partnerships or general inquiries.
-        Together, we build a united, conscious, and responsible Kenya.
-    </p>
-
-    <p style="font-size: 17px; margin-bottom: 8px;">
-        📧 <strong>Email:</strong> 
-        <a href="mailto:kabilayetunikenya@gmail.com" style="color: #ffffff; text-decoration: underline;">
-            kabilayetunikenya@gmail.com
-        </a>
-    </p>
-
-    <p style="font-size: 17px;">
-        📞 <strong>Phone:</strong> 
-        <a href="tel:+254700000000" style="color: #ffffff; text-decoration: underline;">
-            +254 706 676 970
-        </a>
-    </p>
+    </div>
 </section>
 
+<!-- ABOUT -->
+<section>
+    <div class="split">
 
-    <!-- ---------------- FOOTER ---------------- -->
-    <footer>
-        <p><strong>Mission:</strong> Uniting Kenyans under one identity — #Kabila Yetu ni Kenya.</p>
-        <p>© 2026 Kabila Yetu Ni Kenya. All Rights Reserved.</p>
-    </footer>
+        <div>
+            <h2>About Us</h2>
+            <p>
+                A country where unity guides decisions, young people lead with values, and every Kenyan contributes to shaping a peaceful and progressive nation.
+            </p>
+
+            <a href="about.html">
+                <button>Read More</button>
+            </a>
+        </div>
+
+       <div style="text-align:center;">
+    <img src="images/africa.png"
+         style="width:100%; max-width:500px; height:auto; border-radius:12px;">
+</div>
+
+    </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="social-section">
+    <h2>Connect With Us</h2>
+
+    <div class="social-grid">
+
+        <a href="https://www.facebook.com/profile.php?id=61584663070191" target="_blank">
+            <i class="fab fa-facebook-f"></i><br>Facebook
+        </a>
+
+        <a href="https://x.com/kabila2nikenya" target="_blank">
+            <i class="fab fa-twitter"></i><br>X
+        </a>
+
+        <a href="https://www.instagram.com/kabilayetunikenya" target="_blank">
+            <i class="fab fa-instagram"></i><br>Instagram
+        </a>
+
+        <a href="https://www.youtube.com/@kabilayetunikenya" target="_blank">
+            <i class="fab fa-youtube"></i><br>YouTube
+        </a>
+
+        <a href="https://www.tiktok.com/" target="_blank">
+            <i class="fab fa-tiktok"></i><br>TikTok
+        </a>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="text-align:center;">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:kabilayetunikenya@gmail.com" style="color:white;">kabilayetunikenya@gmail.com</a></p>
+    <p>Phone: <a href="tel:+254706676970" style="color:white;">+254 706 676 970</a></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>Mission:</strong> Uniting Kenyans under one identity</p>
+    <p>© 2026 Kabila Yetu Ni Kenya</p>
+</footer>
+
+<script>
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
 
 </body>
 </html>
-
-
