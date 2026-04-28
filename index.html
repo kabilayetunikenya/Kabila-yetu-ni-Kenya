@@ -24,10 +24,10 @@ body {
     background-attachment: fixed;
 }
 
-/* 🔥 WIDER CONTAINER FOR LARGE SCREENS */
+/* 🔥 CONTROL SPACING BETTER */
 section {
-    padding: 80px 40px;
-    max-width: 1400px;   /* increased */
+    padding: 50px 30px;
+    max-width: 1400px;
     margin: auto;
 }
 
@@ -40,24 +40,27 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
-    padding: 15px 20px;
-    background: rgba(226, 32, 32, 0.973);
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 20px;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
+    color: white;
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
     transition: 0.3s;
 }
 
@@ -65,103 +68,53 @@ section {
     color: #00c851;
 }
 
-.menu-toggle {
-    display: none;
-    position: absolute;
-    left: 20px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
 /* ---------- HERO ---------- */
-/* ---------- HERO IMPROVED BALANCE ---------- */
 .hero-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 40px;
     flex-wrap: wrap;
+    margin-bottom: 5px; /* 🔥 tighter */
 }
 
-/* 🔥 LOGO SIDE (BIGGER & STRONGER) */
+/* LOGO */
 .hero-left {
-    flex: 1.2;   /* more space for logo */
+    flex: 1.2;
     text-align: center;
 }
 
 .hero-left img {
-    width: 420px;     /* 🔥 bigger */
+    width: 999px;
     max-width: 100%;
-    height: auto;
+    display: block;
+    margin: 0 auto; /* ✅ centered */
 }
 
 .hero-left p {
-    font-size: 20px;
-    margin-top: 15px;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
-/* 🔥 VIDEO SIDE (REDUCED + CONTROLLED) */
+/* VIDEO */
 .hero-right {
     flex: 1;
 }
 
 .hero-right video {
     width: 100%;
-    height: 350px;        /* reduced */
+    height: 320px;
     object-fit: cover;
     border-radius: 16px;
 }
 
-/* ---------- LARGE SCREENS ---------- */
-@media (min-width: 1200px) {
-
-    .hero-left img {
-        width: 480px;   /* bigger on large screens */
-    }
-
-    .hero-right video {
-        height: 380px;  /* controlled size */
-    }
-}
-
-/* ---------- TABLETS ---------- */
-@media (max-width: 992px) {
-
-    .hero-left img {
-        width: 300px;
-    }
-
-    .hero-right video {
-        height: 260px;
-    }
-}
-
-/* ---------- MOBILE (IMPORTANT FIX) ---------- */
-@media (max-width: 768px) {
-
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-left img {
-        width: 220px;
-    }
-
-    .hero-right video {
-        width: 100%;
-        height: auto;        /* 🔥 KEY FIX */
-        max-height: 250px;   /* prevents overflow */
-        object-fit: contain; /* 🔥 ensures full video fits */
-    }
-}
-
-/* ---------- SPLIT ---------- */
+/* ---------- ABOUT ---------- */
 .split {
     display: flex;
-    gap: 60px;
+    gap: 40px;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 0;
 }
 
 .split div {
@@ -191,7 +144,7 @@ button:hover {
 .social-grid {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
@@ -199,9 +152,15 @@ button:hover {
     text-decoration: none;
     color: white;
     background: rgba(255,255,255,0.1);
-    padding: 20px;
+    padding: 12px;
     border-radius: 10px;
-    width: 120px;
+    width: 90px;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+}
+
+.social-grid i {
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    margin-bottom: 5px;
 }
 
 .social-grid a:hover {
@@ -215,9 +174,7 @@ footer {
     background: rgba(0,0,0,0.7);
 }
 
-
-
-/* ---------- MOBILE ---------- */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
 
     .hero-container,
@@ -227,30 +184,18 @@ footer {
     }
 
     .hero-left img {
-        width: 180px;
+        width: 220px;
     }
 
     .hero-right video {
-        height: 250px;
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+        object-fit: contain;
     }
 
     .nav-links {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background: rgba(0,0,0,0.95);
-        display: none;
-        padding: 20px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
+        gap: 12px;
     }
 }
 
@@ -261,10 +206,6 @@ footer {
 
 <!-- NAVBAR -->
 <nav class="navbar">
-    <div class="menu-toggle" id="menu-toggle">
-        <i class="fas fa-bars"></i>
-    </div>
-
     <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -275,12 +216,12 @@ footer {
 </nav>
 
 <!-- HERO -->
-<section>
+<section style="padding-bottom: 10px;">
     <div class="hero-container">
 
         <div class="hero-left">
             <img src="images/Untitled design.png">
-            <p>One People, One Nation, One Tribe.</p>
+            <p>One Nation, One People, One Tribe.</p>
         </div>
 
         <div class="hero-right">
@@ -293,24 +234,27 @@ footer {
 </section>
 
 <!-- ABOUT -->
-<section>
+<section style="padding-top: 10px;">
     <div class="split">
 
-        <div>
+        <div style="max-width: 550px;">
             <h2>About Us</h2>
-            <p>
-                A country where unity guides decisions, young people lead with values, and every Kenyan contributes to shaping a peaceful and progressive nation.
-            </p>
+
+            <p style="line-height: 1.6; font-size: 0.95rem; max-width: 500px;">
+    Kabila Yetu Ni Kenya is a movement built on one belief — that we are stronger as one people. 
+    We bring together leaders, youth, and communities to promote unity, shared identity, and purposeful action. 
+    Through mentorship, initiatives, and national conversations, we are shaping a generation that chooses peace and progress.
+</p>
 
             <a href="about.html">
-                <button>Read More</button>
+                <button>Learn More</button>
             </a>
         </div>
 
-       <div style="text-align:center;">
-    <img src="images/africa.png"
-         style="width:100%; max-width:500px; height:auto; border-radius:12px;">
-</div>
+        <div style="text-align:center;">
+            <img src="images/ADASA.jpeg"
+                 style="width:100%; max-width:380px; height:auto; border-radius:12px;">
+        </div>
 
     </div>
 </section>
@@ -356,15 +300,6 @@ footer {
     <p><strong>Mission:</strong> Uniting Kenyans under one identity</p>
     <p>© 2026 Kabila Yetu Ni Kenya</p>
 </footer>
-
-<script>
-const toggle = document.getElementById("menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-toggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-</script>
 
 </body>
 </html>
