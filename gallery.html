@@ -12,11 +12,11 @@
 /* ---------- GLOBAL ---------- */
 body {
     margin: 0;
-    font-family: 'Inter', Arial, sans-serif;
-    color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: white;
 
     background-image:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
         url('images/kenya flag.jpg');
 
     background-size: cover;
@@ -24,52 +24,68 @@ body {
     background-attachment: fixed;
 }
 
-/* ---------- BACK BUTTON ---------- */
-.back-home {
-    position: fixed;
-    top: 20px;
-    left: 20px;
+/* ---------- NAVBAR ---------- */
+.navbar {
+    position: sticky;
+    top: 0;
     z-index: 1000;
-    background: rgba(0,0,0,0.5);
-    padding: 10px 12px;
-    border-radius: 50%;
-    color: #ffffff;
-    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 10px;
+    background: rgba(0,0,0,0.95);
 }
 
-.back-home:hover {
-    background: rgba(0,100,0,0.8);
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+}
+
+.nav-links a:hover {
+    color: #00c851;
 }
 
 /* ---------- HEADER ---------- */
 header {
     text-align: center;
-    padding: 60px 20px 30px;
+    padding: 40px 20px 20px;
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: 30px;
 }
 
 header p {
-    max-width: 600px;
+    max-width: 500px;
     margin: auto;
-    line-height: 1.6;
+    font-size: 0.9rem;
 }
 
 /* ---------- VIDEO ---------- */
 .video-section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 15px;
     text-align: center;
 }
 
 .video-wrapper {
     width: 100%;
-    max-width: 900px;
-    margin: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16/9;
     border-radius: 12px;
     overflow: hidden;
 }
@@ -77,64 +93,75 @@ header p {
 .video-wrapper iframe {
     width: 100%;
     height: 100%;
-    border: none;
 }
 
-/* ---------- ALBUM GRID ---------- */
+/* ---------- GRID ---------- */
 .albums {
-    max-width: 1300px;
-    margin: 50px auto;
-    padding: 0 20px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 15px;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
 }
 
 /* ---------- CARD ---------- */
 .album {
     position: relative;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
     color: white;
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
 .album img {
     width: 100%;
-    height: 230px;
+    height: 170px;
     object-fit: cover;
 }
 
-.album .overlay {
+.overlay {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 15px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    padding: 10px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+}
+
+.overlay h3 {
+    font-size: 0.85rem;
+    margin: 0;
 }
 
 .album:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 /* ---------- FOOTER ---------- */
 footer {
     text-align: center;
-    padding: 30px;
-    background: rgba(0,0,0,0.4);
+    padding: 25px;
+    background: rgba(0,0,0,0.5);
 }
 
 /* ---------- MOBILE ---------- */
-@media (max-width: 768px) {
-    header h1 { font-size: 28px; }
-    .album img { height: 200px; }
-}
+@media (max-width: 600px) {
 
-@media (max-width: 480px) {
-    header h1 { font-size: 24px; }
-    .album img { height: 180px; }
+    .albums {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .album img {
+        height: 130px;
+    }
+
+    .overlay h3 {
+        font-size: 0.75rem;
+    }
 }
 
 </style>
@@ -142,27 +169,26 @@ footer {
 
 <body>
 
-<a href="index.html" class="back-home">
-    <i class="fas fa-home"></i>
-</a>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="initiatives.html">Initiatives</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</nav>
 
 <header>
     <h1>Gallery</h1>
-    <p>
-        A visual record of our journey, engagements, and moments that reflect unity and purpose.
-    </p>
+    <p>A visual record of our journey, engagements, and moments that reflect unity and purpose.</p>
 </header>
 
 <section class="video-section">
     <h2>Launch Interview</h2>
-
     <div class="video-wrapper">
-        <iframe 
-            src="https://www.youtube.com/embed/7gQ39diNdX4"
-            title="Launch Interview"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube.com/embed/7gQ39diNdX4" allowfullscreen></iframe>
     </div>
 </section>
 
@@ -170,65 +196,57 @@ footer {
 
     <a href="https://photos.app.goo.gl/3n13sYRUkCVmpZXT6" class="album">
         <img src="images/launch.JPG">
-        <div class="overlay">
-            <h3>National Engagements</h3>
-        </div>
+        <div class="overlay"><h3>National Engagements</h3></div>
     </a>
 
     <a href="https://photos.app.goo.gl/FPTSFkEbAfyxp6va6" class="album">
         <img src="images/githu.jpg">
-        <div class="overlay">
-            <h3>Githurai Youth Unity ft Kenya Bikers
-        </div>
+        <div class="overlay"><h3>Githurai Youth Unity ft Kenya Bikers</h3></div>
     </a>
 
     <a href="https://photos.app.goo.gl/ArxxPqaiHkPxfSRT8" class="album">
         <img src="images/karioko.jpg">
-        <div class="overlay">
-            <h3>Karioko Charity works
-        </div>
+        <div class="overlay"><h3>Karioko Charity Works</h3></div>
     </a>
 
     <a href="https://photos.app.goo.gl/tJtcDKVZ9tW4HKtc7" class="album">
         <img src="images/gallery4.jpg">
-        <div class="overlay">
-            <h3>Dandora Peace Walk</h3>
-        </div>
+        <div class="overlay"><h3>Dandora Peace Walk</h3></div>
     </a>
 
     <a href="https://photos.app.goo.gl/MYp1ga4R4xGXUpyy7" class="album">
         <img src="images/Shekuwe.jpg">
-        <div class="overlay">
-            <h3>Leaders Engagement</h3>
-        </div>
+        <div class="overlay"><h3>Leaders Engagement</h3></div>
     </a>
 
-    <a href="https://photos.app.goo.gl/ENRtqvBBmZ8Ns8yi9" class="album">
+    <a href="https://photos.app.goo.gl/UgAysBqG1vLsfRZb6" class="album">
         <img src="images/Joska fc ft KYNK.JPG">
-        <div class="overlay">
-            <h3>Joska All Stars F.C ft Kabila Yetu Ni Kenya
-        </div>
+        <div class="overlay"><h3>Joska All Stars F.C</h3></div>
     </a>
 
     <a href="https://photos.app.goo.gl/1toiiaUxJ9zE2CK98" class="album">
         <img src="images/PENG.jpg">
-        <div class="overlay">
-            <h3>Kenya Peng riders ft Kynk
-        </div>
+        <div class="overlay"><h3>Kenya Peng Riders ft KYNK</h3></div>
+    </a>
+
+    <a href="https://photos.app.goo.gl/fzh5L6W1j59rDouE7" class="album">
+        <img src="images/">
+        <div class="overlay"><h3>Farova Tournament Cup</h3></div>
     </a>
 
     <a href="https://photos.app.goo.gl/ehRESZo6FkEvPKNy9" class="album">
         <img src="images/ADASA.jpeg">
-        <div class="overlay">
-            <h3>Adasa Children home charity drive
-        </div>
+        <div class="overlay"><h3>Adasa Children Home Charity</h3></div>
     </a>
 
-    <a href="https://panastyproduction36.pixieset.com/mysamplecollection/" class="album">
+    <a href="https://photos.app.goo.gl/fzh5L6W1j59rDouE7" class="album">
+        <img src="images/IMG-20260419-WA0031.jpg">
+        <div class="overlay"><h3>Kasarani Tree Planting</h3></div>
+    </a>
+
+    <a href="https://photos.app.goo.gl/UgAysBqG1vLsfRZb6" class="album">
         <img src="images/jOSKA road safety.jpg">
-        <div class="overlay">
-            <h3>Joska road safety sensitization
-        </div>
+        <div class="overlay"><h3>Joska Road Safety</h3></div>
     </a>
 
 </section>
